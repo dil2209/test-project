@@ -1,0 +1,28 @@
+.sidebar{
+    margin-top: 10px;
+    padding: 10px 0 0 0;
+}
+.sidebar:hover{
+    background-color: #5932EA;
+    color:white !important;
+    border-radius: 5px;
+    width:95%
+}
+.sidebar:hover .icons{
+     color:white !important;
+}
+.point{
+    cursor: pointer;
+}
+.sidebar:hover .side{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.sidebar:hover .linkname{
+    color:white !important;
+}
+.linkname{
+    text-decoration: none;
+    
+}

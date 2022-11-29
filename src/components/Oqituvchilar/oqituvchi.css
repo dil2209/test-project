@@ -1,0 +1,192 @@
+ .table-div {
+        width: 1019px;
+        height: 812px;
+        left: 326px;
+        top: 303px;
+        background: #fff;
+        box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+        border-radius: 30px;
+    }
+    .table-header {
+        display: flex;
+        padding: 30px;
+        flex-direction: row;
+    }
+    .table-header-item {
+        width: 100%;
+    }
+    .table-header-item:nth-child(2) {
+        display: flex;
+    }
+    .table-header-sub-flex {
+        width: 100%;
+    }
+    .title {
+        width: 267.4px;
+        height: 33px;
+        left: 365.65px;
+        top: 333px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        /* identical to box height */
+        letter-spacing: -0.01em;
+        color: #000;
+    }
+    .title-sub-text {
+        width: 116.85px;
+        height: 21px;
+        left: 366px;
+        top: 373px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        letter-spacing: -0.01em;
+        color: #16c098;
+    }
+    .search {
+        width: 227.38px;
+        height: 38px;
+        left: 892.35px;
+        top: 347px;
+        background: #f9fbff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .search-icon svg {
+        margin: 8px 13px 12px 11px;
+    }
+    input {
+        background: transparent;
+        outline: none;
+        border:none;
+    }
+    .filter {
+        display: inline;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        line-height: 18px;
+    }
+    .filter-label {
+        margin-left: 15px;
+        /* identical to box height */
+        color: #7e7e7e;
+    }
+    select {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        line-height: 18px;
+        color: #000;
+        background: transparent;
+        border: 0px;
+        outline: 0px;
+        -webkit-appearance: none;
+        outline: none !important;
+    }
+    .table-data-header {
+        margin-bottom: 14px;
+        display: flex;
+    }
+    .custom-th {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        margin-left: 30px;
+        letter-spacing: -0.01em;
+        color: #b5b7c0;
+        width: 100%;
+    }
+    .custom-row {
+        display: flex;
+        /*border-bottom: 1px solid #EEEEEE;
+         */
+    }
+    .custom-row :not(:last-child) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-left: 30px;
+    }
+    .custom-row .custom-row::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 50%;
+        /* or 100px */
+        border-bottom: 1px solid magenta;
+    }
+    .custom-row > div {
+        display: flex;
+        width: 100%;
+    }
+    .status {
+        padding-top: 24px;
+    }
+    .status .status-div {
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        text-align: center;
+        width: 84.21px !important;
+        height: 29px !important;
+        border-radius: 4px;
+        margin-top: -4px;
+        text-align: center;
+    }
+    .status .status-div p {
+        margin-top: 3px;
+    }
+    .status .status-div.success {
+        background: rgba(22, 192, 152, 0.38);
+        border: 1px solid #00b087;
+        color: #008767;
+    }
+    .status .status-div.danger {
+        background: #ffc5c5;
+        border: 1px solid #df0404;
+        color: #df0404;
+    }
+    .pagination {
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin-right: 60px;
+        margin-top: 25px;
+    }
+    .pagination > * {
+        margin: 20px 0 0 20px;
+    }
+    .pag-div {
+        width: 26px;
+        height: 24px;
+        text-align: center;
+        background: #f5f5f5;
+        border: 1px solid #eee;
+        cursor: pointer;
+    }
+    .pag-div p {
+        position: relative;
+        top: 5%;
+    }
+    .pag-div:hover {
+        color: white;
+        background: #5932ea;
+        border: 1px solid #5932ea;
+    }
+
+

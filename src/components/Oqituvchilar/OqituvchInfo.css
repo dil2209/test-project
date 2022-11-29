@@ -1,0 +1,85 @@
+.main-container {
+    width: 1019px;
+    height: 151px;
+    background: #fff;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.main-container .child {
+    width: 100%;
+}
+.main-container .child .child-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    top: 15%;
+}
+.main-container .child .child-container icon {
+    width: 91px;
+}
+.main-container .child .child-container .info {
+    margin-left: 21px;
+    display: flex;
+    flex-direction: column;
+}
+.main-container .child .child-container .info .info-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: #acacac;
+}
+.main-container .child .child-container .info .big-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+   /* or 32px */
+    letter-spacing: -0.01em;
+    color: #333;
+}
+.main-container .child .child-container .info .sub-title {
+    display: inline-flex;
+}
+.main-container .child .child-container .info .sub-title .sub-title-icon {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    width: 21px;
+    margin-top: 2px;
+}
+.main-container .child .child-container .info .sub-title .sub-title-div {
+    display: flex;
+    margin-top: 3px;
+}
+.main-container .child .child-container .info .sub-title .sub-title-div span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: -0.01em;
+    display: flex;
+}
+.main-container .child .child-container .info .sub-title .danger span {
+    color: #d0004b;
+}
+.main-container .child .child-container .info .sub-title .success span {
+    color: #00ac4f;
+}
+.image-stock {
+    display: flex;
+}
+.ml-5 {
+    margin-left: -10px;
+}
