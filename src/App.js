@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import {Routes, Route} from "react-router-dom";
 import SidebarMenu from './components/Sidebar-menu/Sidebar-menu';
 import SmallSidebarMenu from './components/Sidebar-menu/SmallSideBar'

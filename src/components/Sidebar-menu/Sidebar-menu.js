@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {ReactComponent as First} from '../../images/1.svg' 
 import {ReactComponent as Second} from '../../images/2.svg'
 import {ReactComponent as Third} from '../../images/3.svg'
@@ -10,19 +10,7 @@ import {Link} from 'react-router-dom'
 
 
 export default function SidebarMenu() {
-  const [time, setTime] = useState('')
-  
-  function getTime(){
-    let thisTime = new Date().getTime()
-    setTime(thisTime)
-    console.log()
-  }
- 
-  useEffect(()=>{
-   getTime()
-   
-  }, [])
-  return (
+   return (
     <div>
          <div className='row text-muted sidebar'>
           <div className='col-md-1 ms-4 icons'><First/></div>
