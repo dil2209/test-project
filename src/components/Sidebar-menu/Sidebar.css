@@ -26,3 +26,26 @@
     text-decoration: none;
     
 }
+.sheroz{
+    width:45px;
+}
+.Sheroz-group{
+    margin-top: 15px;
+    display: flex;
+}
+.Sheroz-group-small{
+    margin-top: 250px; 
+}
+.now{
+    margin-top: 7rem; 
+    background: linear-gradient(to right, #EAABF0,#4623E9);
+    color: white;
+    height: 65px;
+    width:90%;
+    border-radius: 15px;
+    text-align: center;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5%;
+}

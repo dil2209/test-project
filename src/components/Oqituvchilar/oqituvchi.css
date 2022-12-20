@@ -113,8 +113,10 @@
     }
     .custom-row {
         display: flex;
-        /*border-bottom: 1px solid #EEEEEE;
-         */
+        padding-left: 10px;
+        border-bottom: 1px solid #EEEEEE;
+
+        
     }
     .custom-row :not(:last-child) {
         padding-top: 24px;
@@ -148,6 +150,10 @@
         border-radius: 4px;
         margin-top: -4px;
         text-align: center;
+        cursor: pointer;
+    }
+    .status-div:active{
+        box-shadow: 0 3px 5px black;
     }
     .status .status-div p {
         margin-top: 3px;
@@ -167,6 +173,7 @@
         flex-wrap: wrap;
         margin-right: 60px;
         margin-top: 25px;
+        text-align: right;
     }
     .pagination > * {
         margin: 20px 0 0 20px;

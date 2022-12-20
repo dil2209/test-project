@@ -1,5 +1,5 @@
 import './App.css';
-import {useState } from 'react';
+import {useEffect, useState } from 'react';
 import {Routes, Route} from "react-router-dom";
 import SidebarMenu from './components/Sidebar-menu/Sidebar-menu';
 import SmallSidebarMenu from './components/Sidebar-menu/SmallSideBar'
@@ -14,8 +14,12 @@ import mainImage from './images/group1.png';
 
 
 
-function App() {
+
+function App({oquvchi}) {
   const [menuHidden, setMenuHidden] = useState(false)
+ 
+
+ 
   return (
     <div className="App">
      <div className='row'>
@@ -64,5 +68,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

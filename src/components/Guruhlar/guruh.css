@@ -1,0 +1,109 @@
+.guruhlar{
+    text-align: left;
+    gap: 20px;
+}
+.guruh-main{
+    background-color: white;
+    border-radius: 25px;
+    padding:15px;
+    width: 90%;
+}
+.guruh-common-info{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.one-info{
+    position: relative;
+   background-color: #FEE4CB;
+   width: 25%;
+   border-radius: 15px;
+   padding: 20px;
+   margin:20px;
+
+}
+.one-info-backend{
+   position: relative;
+   background-color:#DBF6FD;
+   width: 25%;
+   border-radius: 15px;
+   padding: 20px;
+   margin:20px;
+}
+.sort-guruh{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+.sort-text{
+    color: #838383;
+    font-size:16px;
+}
+.guruh-month{
+    font-size: 12px;
+    font-weight: bold;
+    color: #6F6F6F;
+    
+
+}
+.hundred{
+  height: 4px;
+  width:88%;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1;
+}
+.seventy{
+  height: 4px;
+  width: 70%;
+  background-color: #FF942E;
+  position: absolute;
+  z-index: 2;
+  border-left: #FF942E;
+  border-radius: 15px;
+}
+
+
+
+
+
+
+
+.guruh-top{
+    display: inline-flex;
+    background-color: white;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow:  10px 0.6px 0.5 #E2ECF9 ;
+    width: 90%;
+}
+.child{
+    display: inline-flex; 
+    line-height: 12px;
+}
+.ozgarish{
+    display: inline-flex; 
+    font-size: 11px;
+    line-height: 16px !important;
+}
+.name{
+    color: lightgray;
+    font-size: 14px;
+
+}
+.percent{
+    color: #00AC4F;
+    
+}
+.pupil-percent{
+    color: #D0004B;
+    ;
+}
+.vertical-line{
+    width: 2px;
+    height: 75px;
+    background-color:#F0F0F0 ;
+  
+}

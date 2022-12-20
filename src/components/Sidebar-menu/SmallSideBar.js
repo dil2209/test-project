@@ -6,6 +6,7 @@ import {ReactComponent as Third} from '../../images/3.svg'
 import {ReactComponent as Fourth} from '../../images/4.svg'
 import {ReactComponent as Fifth} from '../../images/5.svg'
 import {ReactComponent as Sixth} from '../../images/6.svg'
+import Sheroz from '../../images/sheroz.png'
 import './Sidebar.css'
 
 export default function SmallSideBar() {
@@ -40,6 +41,9 @@ export default function SmallSideBar() {
     <Link className='text-decoration-none' to='/yordam'>
         <Sixth/>
     </Link>
+    </div>
+    <div className='Sheroz-group-small'>
+    <img className='sheroz' src={Sheroz} alt='Sheroz'/>
     </div>
     </div>
   )

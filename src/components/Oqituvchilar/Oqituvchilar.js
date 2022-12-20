@@ -1,21 +1,43 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './oqituvchi.css'
 import OqituvchiInfo from './OqituvchiInfo'
+import {connect} from 'react-redux'
+import {changeActive} from '../../store/OquvchiSlice'
 
-export default function Oqituvchilar() {
+
+
+ function Oqituvchilar({oquvchi, changeActive}){
+    const [oquvchilar, setOquvchilar] = useState([])
+    const [oquvchiOne, setOquvchiOne] = useState([])
+    function changeThisActive(id){
+        changeActive(id)
+    }
+    function searchOquvchi(e){
+        let search = e.target.value
+        let newList =  oquvchiOne.filter(item => item.fio.includes(search) || item.guruh.includes(search) || item.yonalish.includes(search))      
+        setOquvchilar(newList)
+      }
+    useEffect(()=>{
+    setOquvchiOne(oquvchi)
+    setOquvchilar(oquvchi)
+    console.log(oquvchi)
+   },[])
+    useEffect(()=>{
+        setOquvchiOne(oquvchi)
+        setOquvchilar(oquvchi)
+    },[oquvchi])
   return (   
     <div>
         <OqituvchiInfo/>
         <br/>
-
     <div className="table-div">
         <div className="table-header">
             <div className="table-header-item">
                 <p className="title">
-                    Hamma O’quvchilar
+                    Hamma O'quvchilar
                 </p>
                 <span className="title-sub-text">
-                 Faol o’quvchilar
+                 Faol o'quvchilar
              </span>
             </div>
             <div className="table-header-item">
@@ -31,7 +53,7 @@ export default function Oqituvchilar() {
                             </svg>
                         </div>
                         <div className="search-input">
-                            <input type="text" placeholder="Qidiruv"/>
+                            <input type="text" placeholder="Qidiruv" onChange={(e)=>searchOquvchi(e)}/>
                         </div>
                     </div>
                 </div>
@@ -49,122 +71,43 @@ export default function Oqituvchilar() {
             </div>
         </div>
         <div className="table-data">
-            <div className="table-data-header">
+            <div className="table-data-header pe-3">
                 <div className="custom-th">F.I.O</div>
-                <div className="custom-th">Yo’nalish</div>
+                <div className="custom-th">Yo'nalish</div>
                 <div className="custom-th">Telefon nomer</div>
                 <div className="custom-th">To'lov</div>
                 <div className="custom-th">Guruh</div>
                 <div className="custom-th">Status</div>
             </div>
             <hr/>
-            <div className="table-data-elements">
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div success">
-                            <p>Active</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div success">
-                            <p>Active</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
+            <div className="table-data-elements px-3">
+            {oquvchilar? oquvchilar.map((item, index)=>{
+                return (
+                    <div className="custom-row" key={index}>
+                     <div>{item.fio}</div>
+                     <div>{item.yonalish}</div>
+                     <div>{item.tel}</div>
+                     <div>{item.tolov}</div>
+                     <div>{item.guruh}</div>
+                     <div className="status">
+                        {item.active ? 
+                        <div className="status-div success" onClick={()=>changeThisActive(index)}>
+                           <p>Active</p>
+                        </div> 
+                        : <div className="status-div danger" onClick={()=>changeThisActive(index)}>
                             <p>Inactive</p>
-                        </div>
+                        </div> }
+                        
                     </div>
+                    <hr />
                 </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
-                            <p>Inactive</p>
-                        </div>
-                    </div>
+            )
+            }) : " "}
+        
+               
+                
                 </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
-                            <p>Inactive</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
-                            <p>Inactive</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
-                            <p>Inactive</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-                <div className="custom-row">
-                    <div>Jane Cooper</div>
-                    <div>Microsoft</div>
-                    <div>(225) 555-0118</div>
-                    <div>697 000</div>
-                    <div>Jane Cooper</div>
-                    <div className="status">
-                        <div className="status-div danger">
-                            <p>Inactive</p>
-                        </div>
-                    </div>
-                </div>
-                <hr style={{marginLeft:'30px', marginRight: "60px"}}/>
-            </div>
-            <div className="pagination float-right">
+            <div className="pagination">
                 <div className="pag-div"><p>&#60;</p></div>
                 <div className="pag-div"><p>1</p></div>
                 <div className="pag-div"><p>2</p></div>
@@ -180,3 +123,11 @@ export default function Oqituvchilar() {
 </div>
   )
 }
+function mapStateToProps (state){
+ return {oquvchi: state.oquvchiReducer.oquvchi}
+}
+function mapDispatchToProps(dispatch){
+return {
+    changeActive:(id)=>{dispatch(changeActive(id))}} 
+}
+export default connect(mapStateToProps, mapDispatchToProps) (Oqituvchilar)
